@@ -1,20 +1,28 @@
+// Ejercicio 1 – Área de triángulos múltiples
+// Crea una función llamada calcularAreaTriangulo que reciba base y altura y devuelva el área:
+
+// Pide al usuario 3 veces la base y altura de diferentes triángulos usando prompt.
+
+// Usa un bucle for para solicitar los datos 3 veces.
+
+// Usa condicional para verificar que base y altura sean mayores que 0.
+
+// Muestra cada área en consola.
+
+
+
 function calcularAreaTriangulo(base, altura) {
-    return (base * altura) / 2;
+    let resultado = base * altura / 2
+    return resultado
 }
 
-// 2. Usar un bucle for para solicitar los datos 3 veces
-for (let i = 1; i <= 3; i++) {
-    console.log(`Triangulo ${i}`);
-    
-    let base = parseFloat(prompt(`Triángulo ${i}: Ingresa la base:`));
-    let altura = parseFloat(prompt(`Triángulo ${i}: Ingresa la altura:`));
-
-    // 3. Usar condicional para verificar que sean mayores que 0
+for (let i = 0; i < 3; i++) {
+    let base = Number(prompt("Ingrese base:"))
+    let altura = Number(prompt("Ingrese altura:"))
     if (base > 0 && altura > 0) {
-        let area = calcularAreaTriangulo(base, altura);
-        // 4. Muestra cada área en consola
-        console.log(`Base: ${base}, Altura: ${altura} -> Área: ${area}`);
+        let area = calcularAreaTriangulo(base, altura)
+        console.log("El area es " + area)
     } else {
-        console.log("Error: La base y la altura deben ser números mayores que 0.");
+        console.log("base y altura deben ser mayores que 0.")
     }
 }
