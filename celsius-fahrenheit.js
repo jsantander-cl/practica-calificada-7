@@ -17,16 +17,15 @@ function convertirAFahrenheit(i) {
 }
 
 for (let i = 1; i <= 5; i++) {
-    let entrada = Number(prompt("Ingresa los grados Celsius:"));
-    
-    // let celsius = parseFloat(entrada);
+    let grados = Number(prompt("Ingresa los grados Celsius:"));
+    let celsius = parseFloat(grados); // el 10 lo convierte de letra a numero
 
-    if (!isNaN(celsius)) {
-       
+    if (grados > 0 && celsius > 0){
+
         let fahrenheit = convertirAFahrenheit(celsius);
-        console.log(`${celsius}°C equivale a ${fahrenheit}°F`);
+        console.log(celsius + "°C es igual a: " + fahrenheit + "°F");10
 
-    } else {
-        console.log(`Error en la temperatura ${i}: "${entrada}" no es un número válido.`);
+    }else{
+        console.log("valor no valido")
     }
-}
+    }
